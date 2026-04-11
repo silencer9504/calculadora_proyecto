@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora avanzada</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="cabecera">
+      <h1>Calculadora</h1>
+      <p class="subtitulo">Operaciones básicas y funciones extra</p>
+    </header>
+    <div class="calculadora">
+      <div class="pantalla">
+        <div class="memoria" id="indicadorMemoria" aria-hidden="true"></div>
+        <div class="resultado" id="pantalla">0</div>
+      </div>
+      <div class="teclas">
+        <button type="button" class="btn fn" data-accion="limpiar">C</button>
+        <button type="button" class="btn fn" data-accion="limpiarEntrada">CE</button>
+        <button type="button" class="btn fn" data-accion="retroceso">⌫</button>
+        <button type="button" class="btn op" data-op="/">÷</button>
+        <button type="button" class="btn mem" data-accion="mc">MC</button>
+        <button type="button" class="btn mem" data-accion="mr">MR</button>
+        <button type="button" class="btn mem" data-accion="mMas">M+</button>
+        <button type="button" class="btn mem" data-accion="mMenos">M−</button>
+        <button type="button" class="btn fn" data-accion="raiz">√</button>
+        <button type="button" class="btn fn" data-accion="cuadrado">x²</button>
+        <button type="button" class="btn fn" data-accion="inverso">1/x</button>
+        <button type="button" class="btn op" data-op="*">×</button>
+        <button type="button" class="btn num" data-digito="7">7</button>
+        <button type="button" class="btn num" data-digito="8">8</button>
+        <button type="button" class="btn num" data-digito="9">9</button>
+        <button type="button" class="btn op" data-op="-">−</button>
+        <button type="button" class="btn num" data-digito="4">4</button>
+        <button type="button" class="btn num" data-digito="5">5</button>
+        <button type="button" class="btn num" data-digito="6">6</button>
+        <button type="button" class="btn op" data-op="+">+</button>
+        <button type="button" class="btn num" data-digito="1">1</button>
+        <button type="button" class="btn num" data-digito="2">2</button>
+        <button type="button" class="btn num" data-digito="3">3</button>
+        <button type="button" class="btn op" data-op="^" title="Potencia">xʸ</button>
+        <button type="button" class="btn fn" data-accion="porcentaje">%</button>
+        <button type="button" class="btn num" data-digito="0">0</button>
+        <button type="button" class="btn num" data-accion="punto">,</button>
+        <button type="button" class="btn igual" data-accion="igual">=</button>
+      </div>
+    </div>
+    <footer class="pie">
+      <span>Memoria: MC borra · MR recupera · M+/M− suma o resta el valor mostrado</span>
+    </footer>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

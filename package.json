@@ -1,0 +1,13 @@
+{
+  "name": "calculadora_proyecto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Calculadora web con flujo Git, CI/CD y documentación de equipo.",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

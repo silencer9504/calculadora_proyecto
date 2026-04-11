@@ -1,0 +1,183 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --fondo: #0f1419;
+  --tarjeta: #1a2332;
+  --borde: #2d3a4f;
+  --texto: #e8eef7;
+  --muted: #8b9cb3;
+  --acento: #3d8bfd;
+  --acento-hover: #5ca0ff;
+  --num: #2a3548;
+  --num-hover: #36445c;
+  --fn: #3d4f6b;
+  --fn-hover: #4d6285;
+  --mem: #2d4a3e;
+  --mem-hover: #3a5f50;
+  --op: #c45c26;
+  --op-hover: #d96f38;
+  --igual: #1e8f5a;
+  --igual-hover: #26a86a;
+  --sombra: rgba(0, 0, 0, 0.35);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, #1e3a5f 0%, var(--fondo) 55%);
+  color: var(--texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.app {
+  width: 100%;
+  max-width: 380px;
+}
+
+.cabecera {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.cabecera h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.calculadora {
+  background: var(--tarjeta);
+  border-radius: 16px;
+  border: 1px solid var(--borde);
+  box-shadow: 0 16px 48px var(--sombra);
+  overflow: hidden;
+}
+
+.pantalla {
+  padding: 1rem 1.1rem 0.75rem;
+  background: linear-gradient(180deg, #141c28 0%, #121a24 100%);
+  border-bottom: 1px solid var(--borde);
+}
+
+.memoria {
+  min-height: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--acento);
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.memoria.visible {
+  opacity: 1;
+}
+
+.resultado {
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: right;
+  word-break: break-all;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  min-height: 2.7rem;
+}
+
+.teclas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--texto);
+  transition: background 0.15s, transform 0.08s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn.num {
+  background: var(--num);
+}
+
+.btn.num:hover {
+  background: var(--num-hover);
+}
+
+.btn.fn {
+  background: var(--fn);
+  font-size: 0.95rem;
+}
+
+.btn.fn:hover {
+  background: var(--fn-hover);
+}
+
+.btn.mem {
+  background: var(--mem);
+  font-size: 0.8rem;
+}
+
+.btn.mem:hover {
+  background: var(--mem-hover);
+}
+
+.btn.op {
+  background: var(--op);
+  font-size: 1.15rem;
+}
+
+.btn.op:hover {
+  background: var(--op-hover);
+}
+
+.btn.igual {
+  background: var(--igual);
+  font-weight: 600;
+}
+
+.btn.igual:hover {
+  background: var(--igual-hover);
+}
+
+.pie {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 360px) {
+  .resultado {
+    font-size: 1.85rem;
+  }
+
+  .btn {
+    padding: 0.7rem 0.35rem;
+    font-size: 0.95rem;
+  }
+}
