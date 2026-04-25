@@ -17,6 +17,12 @@ describe("calcular", () => {
   test("potencia", () => {
     assert.equal(calcular(2, 8, "^"), 256);
   });
+  test("rechaza operandos invalidos", () => {
+    assert.throws(() => calcular(Number.POSITIVE_INFINITY, 2, "+"), TypeError);
+  });
+  test("rechaza operaciones no soportadas", () => {
+    assert.throws(() => calcular(2, 3, "%"), /Operacion no soportada/);
+  });
 });
 
 describe("formatear", () => {

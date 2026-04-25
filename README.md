@@ -10,6 +10,7 @@ Aplicación web estática (HTML, CSS y JavaScript) con calculadora de varias fun
 | `styles.css` | Estilos de la interfaz |
 | `script.js` | Lógica de interfaz y eventos (módulo ES) |
 | `lib/calculadora.js` | Núcleo reutilizable (formato y operaciones binarias) |
+| `lib/operacionOrm.js` | ORM educativo para persistir operaciones |
 | `tests/` | Pruebas con el ejecutor de pruebas de Node.js |
 | `.github/workflows/` | Pipelines de CI/CD |
 | `docs/` | Guías de flujo de trabajo y convenciones |
@@ -23,6 +24,8 @@ Aplicación web estática (HTML, CSS y JavaScript) con calculadora de varias fun
 ```bash
 npm test
 ```
+
+La guia [docs/TDD.md](docs/TDD.md) resume el uso de Red-Green-Refactor, la kata TDD y el ORM liviano del proyecto.
 
 ## Desarrollo
 
